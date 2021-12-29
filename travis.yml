@@ -6,10 +6,10 @@ services:
  -docker
 
 before_install:
- - docker build -t songyoungmin/react-test-app -f ./frontend/Docerfile.dev ./frontend
+ - docker build -t songyoungmin/react-test-app -f ./frontend/Dockerfile.dev ./frontend
 
 script:
- - docker run -e CI=true = songoungmin/react-test-app npm run test
+ - docker run -e CI=true = songyoungmin/react-test-app npm run test
 
 after_success:
   - docker build -t songyoungmin/docker-frontend ./frontend
@@ -22,4 +22,4 @@ after_success:
   - docker push songyoungmin/docker-backend
   - docker push songyoungmin/docker-nginx
 
-  
+
