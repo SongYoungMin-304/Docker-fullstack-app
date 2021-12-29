@@ -1,4 +1,7 @@
 language : generic
+branches:
+ only:
+   - master
 
 sudo: required
 
@@ -17,7 +20,7 @@ after_success:
   - docker build -t songyoungmin/docker-backend  ./backend
   - docker build -t songyoungmin/docker-nginx ./nginx
 
-  - echo "Odudals753!" | docker login -u "songyoungmin" --password-stdin
+  - echo "password" | docker login -u "songyoungmin" --password-stdin
 
   - docker push songyoungmin/docker-fronted
   - docker push songyoungmin/docker-backend
