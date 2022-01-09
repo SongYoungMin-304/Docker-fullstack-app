@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "name": "frontend",
-            "image": "smileajw1004/docker-frontend",
+            "image": "songyoungmin/docker-frontend",
             "hostname": "frontend",
             "essential": false,
             "memory": 128
