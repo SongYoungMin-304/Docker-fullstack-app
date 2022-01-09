@@ -26,18 +26,18 @@ after_success:
   - docker push songyoungmin/docker-backend
   - docker push songyoungmin/docker-nginx
 
-deploy:
- provider: elasticbeanstalk
- region: "us-east-2"
- app: "docker-fullstack-app"
- env: "Dockerfullstackapp-env"
- bucket_name : elasticbeanstalk-us-east-2-529541061065
- bucket_path : "docker-fullstack-app"
- on:
-   branch: master
+#deploy:
+# provider: elasticbeanstalk
+# region: "us-east-2"
+# app: "docker-fullstack-app"
+# env: "Dockerfullstackapp-env"
+# bucket_name : elasticbeanstalk-us-east-2-529541061065
+# bucket_path : "docker-fullstack-app"
+# on:
+#   branch: master
 
-access_key_id: $AWS_ACCESS_KEY
-security_access_key: $AWS_SECRET_ACCESS_KEY
+#access_key_id: $AWS_ACCESS_KEY
+#security_access_key: $AWS_SECRET_ACCESS_KEY
 
 
 
